@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Random image
+        </title>
+        <style>
+            body{
+                background-color: black;
+                color:red;
+            }
+            .division{
+                background-color: white;
+                width: 500px;
+                border-radius: 10px;
+                margin-left: 30%;  
+                height: 570px;              
+            }
+        </style>
+    </head>
+    <body>
+        <div class="division">
+        <center>
+        <h1>Random Image generator</h1>
+        <img id="a" src="16.PNG" style="width: 300px;"><br>
+        <br>
+        <button style="background-color: black;color: red;border: none;border-radius: 5px;cursor:pointer;padding: 10px 20px;box-shadow: 5px 5px 5px 2px rgb(250, 91, 91);" onclick="run()">Random image</button>
+        </center>
+        <script>
+            const b=[
+                "https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D",
+                "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
+                "https://img.freepik.com/free-photo/morskie-oko-tatry_1204-510.jpg?semt=ais_hybrid&w=740",
+                "https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-beautiful-black-horses-pictures-best-of-free-hd-wallpapers-horse-images-image_2951847.jpg",
+                "https://t4.ftcdn.net/jpg/02/01/78/01/360_F_201780104_hetXS26W8alnsbDKbpnr4sVizJfiO12w.jpg"
+            ];
+            function run(){
+                const images=document.getElementById('a');
+                const koi=Math.floor(Math.random() * b.length)
+                images.src=b[koi]
+            }
+        </script>
+        </div>
+    </body>
+</html>
